@@ -56,8 +56,14 @@ public class Main {
             name = getName(cell); // We now have a name to compare to spreadsheet 2;
             names.push(name);
         }
+        String prevName = " "; // keeps track of previous name to get rid of doubles.
+
         while(!names.empty()) {
             name = names.peek();
+            if(name.equalsIgnoreCase(prevName)){
+                prevName = names.peek();
+                name = name + " " + Math.random() * 10;
+            }
             for (int j = 0; j <= infinSheet.getPhysicalNumberOfRows(); j++) { //starts from end because stack
                 if (j == infinSheet.getPhysicalNumberOfRows()) { //reach end of list, not found
                     System.out.println("Row Added to stack:");
@@ -78,7 +84,7 @@ public class Main {
                     }
                 }
             }
-            names.pop();
+            prevName = names.pop();
         }
             finishItOff(leftover, infinSheet,originalCount);
             return infin;
