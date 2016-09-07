@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="993d369c-1756-4998-91fb-8dd2aa969644" name="Default" comment="" />
+    <list default="true" id="993d369c-1756-4998-91fb-8dd2aa969644" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Excel/Main.class" afterPath="$PROJECT_DIR$/out/production/Excel/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+    </list>
     <ignored path="Excel.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,11 +31,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="133" column="76" selection-start-line="133" selection-start-column="76" selection-end-line="133" selection-end-column="76" />
+            <state relative-caret-position="338">
+              <caret line="158" column="36" selection-start-line="158" selection-start-column="36" selection-end-line="158" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#createRowAtEnd#0;class#Main#0" expanded="false" />
+                <element signature="method#createNewRow#0;class#Main#0" expanded="false" />
                 <element signature="method#getName#0;class#Main#0" expanded="false" />
               </folding>
             </state>
@@ -45,6 +50,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -615,16 +623,17 @@
       <workItem from="1472842327588" duration="7952000" />
       <workItem from="1473102378021" duration="4052000" />
       <workItem from="1473107253938" duration="3024000" />
-      <workItem from="1473117733509" duration="17045000" />
+      <workItem from="1473117733509" duration="19228000" />
+      <workItem from="1473252092867" duration="2718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32073000" />
+    <option name="totallyTimeSpent" value="36974000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="0" width="1225" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="55" y="0" width="1225" height="800" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -634,7 +643,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5063398" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991204" sideWeight="0.49366018" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991204" sideWeight="0.49366018" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -667,21 +676,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Excel Spreadsheet/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="86" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createRowAtEnd#0;class#Main#0" expanded="false" />
+            <element signature="method#createNewRow#0;class#Main#0" expanded="false" />
             <element signature="method#getName#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -691,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="12" column="86" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,7 +701,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createRowAtEnd#0;class#Main#0" expanded="false" />
+            <element signature="method#createNewRow#0;class#Main#0" expanded="false" />
             <element signature="method#getName#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -711,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="12" column="86" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,7 +720,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createRowAtEnd#0;class#Main#0" expanded="false" />
+            <element signature="method#createNewRow#0;class#Main#0" expanded="false" />
             <element signature="method#getName#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -731,17 +730,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="12" column="86" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="133" column="76" selection-start-line="133" selection-start-column="76" selection-end-line="133" selection-end-column="76" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createRowAtEnd#0;class#Main#0" expanded="false" />
+            <element signature="method#createNewRow#0;class#Main#0" expanded="false" />
+            <element signature="method#getName#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Excel Spreadsheet/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="86" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="158" column="36" selection-start-line="158" selection-start-column="36" selection-end-line="158" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createNewRow#0;class#Main#0" expanded="false" />
             <element signature="method#getName#0;class#Main#0" expanded="false" />
           </folding>
         </state>

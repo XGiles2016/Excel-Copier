@@ -1,4 +1,5 @@
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.CellCopyPolicy;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.*;
 import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
@@ -59,9 +60,9 @@ public class Main {
             name = names.peek();
             for (int j = 0; j <= infinSheet.getPhysicalNumberOfRows(); j++) { //starts from end because stack
                 if (j == infinSheet.getPhysicalNumberOfRows()) { //reach end of list, not found
-                    System.out.println("Row Added:");
-                    createNewRow(asSheet, names.size() - 1, infinSheet, 1);
-                    leftover.push(createRowAtEnd(infinSheet, name, count));
+                    System.out.println("Row Added to stack:");
+                    //createNewRow(asSheet, names.size() - 1, infinSheet, 1);
+                    leftover.push(getRow(asSheet, names.size() -1));
                     count++;
                     break;
                 } else {
@@ -79,7 +80,7 @@ public class Main {
             }
             names.pop();
         }
-            getLeftovers(leftover, infinSheet, asSheet, originalCount, count);
+            finishItOff(leftover, infinSheet,originalCount);
             return infin;
 
     }
@@ -131,14 +132,57 @@ public class Main {
 
     }
 
-    public String createRowAtEnd(XSSFSheet sheet, String name, int rowNumber){
+    public XSSFRow getRow(XSSFSheet sheet, int rowNumber){
+        return sheet.getRow(rowNumber);
+    }
+
+    public void finishItOff(Stack<XSSFRow> rows, XSSFSheet sheet, int rowNumber){
+
+        /*for(int i = beginLoop; i <endLoop; i++){
+            XSSFRow newRow = createRowAtEnd(sheet,"Name Added",i);
+            XSSFRow currentRow = rows.pop();
+            newRow.copyRowFrom(currentRow, new CellCopyPolicy());
+        }*/
+        String name = "";
+        XSSFCell first;
+        XSSFCell last;
+        while(!rows.empty()){
+            name = rows.peek().getCell(0).toString();
+            String[] full = name.split(",");
+            XSSFRow newRow = createRowAtEnd(sheet, name, rowNumber);
+            XSSFRow oldRow = rows.pop();
+            last = newRow.createCell(0, Cell.CELL_TYPE_STRING);
+            name = "";
+            for(String x : full){
+                name+= x;
+            }
+            last.setCellValue(name);
+
+
+
+
+            int column = 16;
+            for(int i = 0; i < oldRow.getLastCellNum(); i++){
+                XSSFCell oldCell = oldRow.getCell(i);
+                XSSFCell newCell = newRow.createCell(i + column, Cell.CELL_TYPE_STRING);
+                if(oldCell == null){
+                    newCell = null;
+                    continue;
+                }
+                newCell.setCellValue(oldCell.toString());
+            }
+            rowNumber++;
+        }
+    }
+
+    public XSSFRow createRowAtEnd(XSSFSheet sheet, String name, int rowNumber){
         XSSFRow newRow = sheet.createRow(rowNumber);
         String[] fullName = name.split(" ");
         XSSFCell last = newRow.createCell(0,Cell.CELL_TYPE_STRING);
         XSSFCell first = newRow.createCell(1, Cell.CELL_TYPE_STRING);
         last.setCellValue(fullName[0]);
         first.setCellValue(fullName[1]);
-        return name;
+        return newRow;
     }
 
     public void copyToNewSpreadsheet(XSSFSheet asSheet, int originalRow, XSSFSheet infinSheet, int destRow) throws IOException {
@@ -196,7 +240,7 @@ public class Main {
         return name.trim();
     }
 
-    public void getLeftovers(Stack<String> leftovers, XSSFSheet sheet, XSSFSheet original, int originalCount, int count){
+   /* public void getLeftovers(Stack<String> leftovers, XSSFSheet sheet, XSSFSheet original, int originalCount, int count){
         while(!leftovers.empty()){
             for(int i = originalCount; i <= count; i++){
                 String name = sheet.getRow(i).getCell(0).toString() + " ";
@@ -206,5 +250,5 @@ public class Main {
                 }
             }
         }
-    }
+    }*/
 }
